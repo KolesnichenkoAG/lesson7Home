@@ -8,9 +8,8 @@ public class Plate {
         this.foodQuantity = foodQuantity;
         this.minFood = minFood;
     }
-
     public void info() {
-        System.out.println("Текущее кол-во еды " + foodQuantity);
+        System.out.println("Текущее кол-во еды " + this.foodQuantity);
     }
     public void decreaseFood(int foodQuantity) {
             if (this.foodQuantity > minFood) {
@@ -22,5 +21,9 @@ public class Plate {
             return true;
         }
         return false;
+    }
+    public void addFood(int foodQuantity) {
+        this.foodQuantity += foodQuantity;
+        System.out.println("в тарелку добавили еды ");
     }
 }

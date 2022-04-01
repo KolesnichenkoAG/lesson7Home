@@ -3,7 +3,8 @@ package homework;
 public class Cat {
     private String name;
     private int appetite;
-    private int fullness;
+    private int fullness; // по условиям задачи не указано что сытость и апетит
+    // должны быть ровны. поэтому попытался сделать что коты могут несколько раз кушать
     int startfullness;
 
     public Cat(String name, int appetite, int fullness) {
@@ -28,7 +29,7 @@ public class Cat {
     }
     public boolean satiety() {
         if (startfullness >= fullness) {
-            System.out.println("Кот " + name + " наелся он съел " + fullness);
+            System.out.println("Кот " + name + " наелся он съел " + startfullness);
             return true;
         }
         return false;
